@@ -1,0 +1,23 @@
+﻿@model List<Mvc8amMasterBatch.Models.EmployeeModel>
+@{
+    ViewBag.Title = "GetListEmployee";
+}
+
+<h2>GetListEmployee</h2>
+
+<table>
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>

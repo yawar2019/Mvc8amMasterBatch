@@ -1,0 +1,30 @@
+﻿@model Mvc8amMasterBatch.Models.EmpDept
+@{
+    ViewBag.Title = "GetListEmpDept";
+}
+
+<h2>GetListEmpDept</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+    
+        @foreach (var item in Model.listemp)
+        {
+            <tr>
+                <td>
+                    @item.EmpId
+                </td>
+                <td>
+                    @item.EmpName
+                </td>
+                <td>
+                    @item.EmpSalary
+                </td>
+            </tr>
+        }
+   
+</table>
