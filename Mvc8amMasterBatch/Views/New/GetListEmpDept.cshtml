@@ -27,4 +27,24 @@
             </tr>
         }
    
+</table><br /><br />
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>DeptId</th>
+        <th>DeptName</th>
+    </tr>
+
+    @foreach (var item in Model.listdept)
+    {
+        <tr>
+            <td>
+                @item.DeptId
+            </td>
+            <td>
+                @item.DeptName
+            </td>
+        </tr>
+    }
+
 </table>

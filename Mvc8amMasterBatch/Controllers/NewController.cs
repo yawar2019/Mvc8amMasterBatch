@@ -9,6 +9,7 @@ namespace Mvc8amMasterBatch.Controllers
 {
     public class NewController : Controller
     {
+        //Deilip have taken Latest
         // GET: New
         public int getId()
         {
