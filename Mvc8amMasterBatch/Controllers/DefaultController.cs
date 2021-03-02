@@ -9,9 +9,19 @@ namespace Mvc8amMasterBatch.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        public ActionResult GoodMorning()
+        public RedirectResult GoodMorning()
         {
-            return View();
+            return Redirect("http://www.google.com");
+        }
+
+        public RedirectResult GoodMorning2()
+        {
+            return Redirect("~/new/GetListEmployee?id=100");
+        }
+
+        public RedirectToRouteResult GoodEvening() {
+
+            return RedirectToRoute("burger");
         }
     }
 }

@@ -14,6 +14,14 @@ namespace Mvc8amMasterBatch
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapMvcAttributeRoutes();
 
+
+            routes.MapRoute(
+             name: "burger",
+             url: "pistahouse/burger",
+             defaults: new { controller = "New", action = "GetListEmployee", id = UrlParameter.Optional }
+         );
+
+
             routes.MapRoute(
                name: "Default1",
                url: "pistahouse/cake",

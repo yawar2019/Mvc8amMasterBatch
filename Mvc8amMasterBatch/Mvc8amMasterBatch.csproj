@@ -165,6 +165,7 @@
     <Content Include="Views\New\GetEmployee.cshtml" />
     <Content Include="Views\New\GetListEmployee.cshtml" />
     <Content Include="Views\New\GetListEmpDept.cshtml" />
+    <Content Include="Views\New\GetListEmpDept2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

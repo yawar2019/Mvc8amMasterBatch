@@ -64,8 +64,8 @@ namespace Mvc8amMasterBatch.Controllers
 
             return View();
         }
-        
-        
+
+
         public ActionResult sendInfoUsingModel()
         {
             EmployeeModel obj = new EmployeeModel();
@@ -109,17 +109,18 @@ namespace Mvc8amMasterBatch.Controllers
             return View();
         }
 
-        public ActionResult GetEmployee() {
+        public ActionResult GetEmployee()
+        {
 
             EmployeeModel obj = new EmployeeModel();
             obj.EmpId = 1;
             obj.EmpName = "Manoj";
             obj.EmpSalary = 70000;
-       
+
             return View(obj);
         }
 
-        public ActionResult GetListEmployee()
+        public ViewResult GetListEmployee()
         {
 
             List<EmployeeModel> listObj = new List<EmployeeModel>();
@@ -175,9 +176,9 @@ namespace Mvc8amMasterBatch.Controllers
 
             /////////////////////////////////////
 
-            
 
-               List<DepartmentModel> listdeptObj = new List<DepartmentModel>();
+
+            List<DepartmentModel> listdeptObj = new List<DepartmentModel>();
 
 
             DepartmentModel detp = new DepartmentModel();
@@ -200,5 +201,9 @@ namespace Mvc8amMasterBatch.Controllers
             return View(empdeptobj);
         }
 
+        public ActionResult GetListEmpDept2()
+        {
+            return View();
+        }
     }
 }
