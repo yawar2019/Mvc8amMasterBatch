@@ -1,0 +1,16 @@
+﻿@model List<Mvc8amMasterBatch.Models.Movies>
+
+<h1>My Favorite Movies</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>MovieName</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MovieId</td>
+            <td>@item.MovieName</td>
+        </tr>
+    }
+</table>

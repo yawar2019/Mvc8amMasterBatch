@@ -142,6 +142,7 @@
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\Movies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,10 @@
     <Content Include="Views\New\GetListEmployee.cshtml" />
     <Content Include="Views\New\GetListEmpDept.cshtml" />
     <Content Include="Views\New\GetListEmpDept2.cshtml" />
+    <Content Include="Views\New\getPartialView.cshtml" />
+    <Content Include="Views\Shared\_MypartialView.cshtml" />
+    <Content Include="Views\Default\GetMovie.cshtml" />
+    <Content Include="Views\Shared\_MypartialView1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

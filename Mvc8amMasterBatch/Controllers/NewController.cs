@@ -205,5 +205,10 @@ namespace Mvc8amMasterBatch.Controllers
         {
             return View();
         }
+
+        public ActionResult getPartialView()
+        {
+          return  View();
+        }
     }
 }
