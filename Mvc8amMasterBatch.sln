@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc8amMasterBatch", "Mvc8am
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{20464907-BC92-460E-A6EE-D1A29137DD45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{6ADB7974-7EA4-4751-A6AE-040E9751627C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{20464907-BC92-460E-A6EE-D1A29137DD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20464907-BC92-460E-A6EE-D1A29137DD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20464907-BC92-460E-A6EE-D1A29137DD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADB7974-7EA4-4751-A6AE-040E9751627C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADB7974-7EA4-4751-A6AE-040E9751627C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADB7974-7EA4-4751-A6AE-040E9751627C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADB7974-7EA4-4751-A6AE-040E9751627C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

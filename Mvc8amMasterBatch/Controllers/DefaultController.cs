@@ -92,5 +92,42 @@ namespace Mvc8amMasterBatch.Controllers
 
             return PartialView("_MypartialView1", listMovie);
         }
+
+        public JsonResult GetmeJsonData()
+        {
+
+            Movies mobj = new Movies();
+            mobj.MovieId = 1;
+            mobj.MovieName = "Motapatlu";
+
+
+            Movies mobj1 = new Movies();
+            mobj1.MovieId = 2;
+            mobj1.MovieName = "SuperCock";
+
+            Movies mobj2 = new Movies();
+            mobj2.MovieId = 3;
+            mobj2.MovieName = "Bahuballi";
+
+            List<Movies> listMovie = new List<Movies>();
+            listMovie.Add(mobj);
+            listMovie.Add(mobj1);
+            listMovie.Add(mobj2);
+
+            return Json(listMovie);
+
+
+        }
+
+        public FileResult GetmeFile() {
+
+            return File("~/Web.config","text");
+        }
+
+        public FileResult GetmeFile2()
+        {
+
+            return File("~/File/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
     }
 }
