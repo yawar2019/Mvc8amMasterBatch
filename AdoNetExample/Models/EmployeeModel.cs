@@ -37,5 +37,17 @@ namespace AdoNetExample.Models
             return lstmodel;
         }
 
+
+        public int CreateEmployee(string Name, int Salary)
+        {
+            SqlCommand cmd = new SqlCommand("spr_InsertEmployeeDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@empname", Name);
+            cmd.Parameters.AddWithValue("@empsalary", Salary);
+            int i = cmd.ExecuteNonQuery();
+            con.Close();
+            return i;
+        }
     }
 }

@@ -15,5 +15,25 @@ namespace AdoNetExample.Controllers
         {
             return View(db.GetEmployees());
         }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(FormCollection frm)
+        {
+            string Name = frm["EmpName"];
+            int Salary = Convert.ToInt32(frm["EmpSalary"]);
+            int i = db.CreateEmployee(Name, Salary);
+            if(i>0)
+            {
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }
