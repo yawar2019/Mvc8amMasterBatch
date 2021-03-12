@@ -35,5 +35,36 @@ namespace AdoNetExample.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeesById(id);
+            return View(emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+             
+            int i = db.SaveEmployee(emp);
+            if (i > 0)
+            {
+                return RedirectToAction("index");
+            }
+            else
+            {
+                return View();
+            }
+            
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            EmployeeModel emp = db.GetEmployeesById(id);
+            return View(emp);
+        }
+
     }
 }

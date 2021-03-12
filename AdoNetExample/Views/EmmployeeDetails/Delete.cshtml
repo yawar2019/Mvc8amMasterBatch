@@ -1,0 +1,11 @@
+﻿@model AdoNetExample.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<form  action="~/EmmployeeDetails/Delete/@Model.EmpId" method="post">
+    <input type="submit" value="Delete" class="btn-warning" />
+</form>
