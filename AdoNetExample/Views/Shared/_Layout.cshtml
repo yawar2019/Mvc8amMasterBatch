@@ -29,6 +29,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        @if (IsSectionDefined("mysection"))
+        {
+        @RenderSection("mysection", false)
+        }
+        else {
+            <h3>Comming Soon Our Section</h3>
+        }
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
