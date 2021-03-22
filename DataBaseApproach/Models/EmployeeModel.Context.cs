@@ -25,6 +25,7 @@ namespace DataBaseApproach.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<employeeDetail> employeeDetails { get; set; }
     }
 }

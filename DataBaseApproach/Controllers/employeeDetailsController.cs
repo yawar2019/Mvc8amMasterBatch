@@ -17,7 +17,17 @@ namespace DataBaseApproach.Controllers
         // GET: employeeDetails
         public ActionResult Index()
         {
-            return View(db.employeeDetails.ToList());
+            var record = (from e in db.employeeDetails
+                          join d in db.Departments
+                          on e.DeptId equals d.DeptId
+                          select new EmpDept
+                          {
+                              EmpId=e.EmpId,
+                              EmpName=e.EmpName,
+                              EmpSalary=e.EmpSalary,
+                              DeptName = d.DeptName,
+                          });
+            return View(record);
         }
 
         // GET: employeeDetails/Details/5
