@@ -12,5 +12,9 @@ namespace CodeFirstApproach.Models
         public int EmpId { get; set; }
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
+        public string Designation { get; set; }
+        public string EmailId { get; set; }
+        public string Address { get; set; }
+        public string MobileNumber { get; set; }
     }
 }
