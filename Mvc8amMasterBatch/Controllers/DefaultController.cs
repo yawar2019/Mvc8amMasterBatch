@@ -129,5 +129,11 @@ namespace Mvc8amMasterBatch.Controllers
 
             return File("~/File/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
         }
+        public ActionResult HtmlHelperExample()
+        {
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpName = "Swamy";
+            return View(obj);
+        }
     }
 }

@@ -172,6 +172,7 @@
     <Content Include="Views\Shared\_MypartialView.cshtml" />
     <Content Include="Views\Default\GetMovie.cshtml" />
     <Content Include="Views\Shared\_MypartialView1.cshtml" />
+    <Content Include="Views\Default\HtmlHelperExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

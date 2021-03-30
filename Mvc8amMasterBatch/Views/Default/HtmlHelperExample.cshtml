@@ -1,0 +1,27 @@
+﻿@model  Mvc8amMasterBatch.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+<script>
+    function fun() {
+        var a = document.getElementById("txt EmpName").value;
+        alert(a);
+    }
+</script>
+
+
+@*@Html.TextBox("Emp Name","Monika",new { style = "background-color:deepskyblue;",@class="form-control",@id="txtEmpName", @onclick = "fun()"})<br />
+<input type="text" name="name" value="swamy" style="background-color:deepskyblue;" class="form-control" />
+@Html.TextBoxFor(x=>x.EmpName, new { style = "background-color:deepskyblue;", @class = "form-control", @id = "txtEmpName" })
+<br />
+@Html.LabelFor(x=>x.EmpName)
+
+<br />
+
+@Html.EditorFor(x=>x.Status)
+<br />
+@Html.EditorFor(x => x.EmpId)*@
+
+@Html.EditorForModel(Model)
