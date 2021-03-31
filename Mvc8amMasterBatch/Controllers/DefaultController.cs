@@ -131,6 +131,8 @@ namespace Mvc8amMasterBatch.Controllers
         }
         public ActionResult HtmlHelperExample()
         {
+            EmployeeEntities db = new Models.EmployeeEntities();
+            ViewBag.Country = new SelectList(db.Roles, "id", "RoleName",3);
             EmployeeModel obj = new Models.EmployeeModel();
             obj.EmpName = "Swamy";
             return View(obj);

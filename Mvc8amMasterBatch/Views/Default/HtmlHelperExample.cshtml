@@ -24,4 +24,34 @@
 <br />
 @Html.EditorFor(x => x.EmpId)*@
 
-@Html.EditorForModel(Model)
+@*@Html.EditorForModel(Model)*@
+
+
+@Html.Password("pwd", "dilip", new {@class="form-control" })<br />
+@Html.CheckBox("java",true,new { @class = "form-control" })
+@Html.CheckBox("Dotnet", new { @class = "form-control" })<br />
+
+<span>Male</span>@Html.RadioButton("Gender","Male",true)
+<span>Female</span>@Html.RadioButton("Gender", "FemMale")
+<br />
+
+
+<select name="">
+    <option value="1">India</option>
+    <option value="2">pakistan</option>
+    <option value="3">srilanka</option>
+</select>
+
+<br />
+
+@Html.DropDownList("Country", new List<SelectListItem>()
+{
+
+new SelectListItem {Text="India",Value="1",Disabled=true },
+new SelectListItem {Text="Pakistan",Value="2" },
+new SelectListItem {Text="SriLanka",Value="3",Selected=true }
+
+},"Select Country")
+<br />
+@Html.DropDownList("Country")
+
