@@ -1,4 +1,5 @@
 ﻿@model  Mvc8amMasterBatch.Models.EmployeeModel
+@using Mvc8amMasterBatch.MyUserControl
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -54,4 +55,27 @@ new SelectListItem {Text="SriLanka",Value="3",Selected=true }
 },"Select Country")
 <br />
 @Html.DropDownList("Country")
+<br />
+@Html.DropDownList("CountryList",(IEnumerable<SelectListItem>)ViewBag.Country)
+
+@myHtmlHelper.MyLabel("I Accept the Agreement")<br />
+
+@Html.createUrControl("text")<br />
+@Html.createUrControl("radio")<br />
+@Html.createUrControl("file")<br /><br />
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("I accept Aggreement")
+
+
+
+
+
+
+
+
+
 

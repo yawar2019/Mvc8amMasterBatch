@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Mvc8amMasterBatch.Filter;
 namespace Mvc8amMasterBatch.Controllers
-{
+{     
     public class NewController : Controller
     {
         //Mounika have taken Latest
         // GET: New
-        public int getId()
+   [MyFilter]
+        public ActionResult FavoriteTeam()
         {
-            return 1211;
+
+            ViewBag.Team = "Favorite Team of Suja is Kenya Team";
+            return View();
         }
 
         [Route("Anna/Wada")]
@@ -209,6 +212,27 @@ namespace Mvc8amMasterBatch.Controllers
         public ActionResult getPartialView()
         {
           return  View();
+        }
+
+        [HttpGet]
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ValidationExample(RegisterModel reg)
+        {
+            if (ModelState.IsValid)
+            {
+                //logic
+                return Redirect("~/new/ValidationExample");
+            }
+            else
+            {
+                // block when ur model is not valid 
+                return View(reg);
+            }
+           
         }
     }
 }

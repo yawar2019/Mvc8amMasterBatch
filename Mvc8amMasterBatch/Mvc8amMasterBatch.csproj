@@ -157,6 +157,11 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -164,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="Filter\MyFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,6 +177,7 @@
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\Movies.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>RoleModel.tt</DependentUpon>
     </Compile>
@@ -189,6 +196,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RoleModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\myHtmlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +226,8 @@
     <Content Include="Views\Default\GetMovie.cshtml" />
     <Content Include="Views\Shared\_MypartialView1.cshtml" />
     <Content Include="Views\Default\HtmlHelperExample.cshtml" />
+    <Content Include="Views\New\ValidationExample.cshtml" />
+    <Content Include="Views\New\FavoriteTeam.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
