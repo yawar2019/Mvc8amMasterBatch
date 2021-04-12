@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Mvc8amMasterBatch.Filter;
+using System.Web.Security;
+
 namespace Mvc8amMasterBatch.Controllers
 {     
     public class NewController : Controller
@@ -233,6 +235,35 @@ namespace Mvc8amMasterBatch.Controllers
                 return View(reg);
             }
            
+        }
+
+        public ActionResult Login() {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(RegisterModel reg)
+        {
+            if (reg.UserName == "Admin" && reg.Password == "Admin")
+            {
+                FormsAuthentication.SetAuthCookie(reg.UserName, false);
+                return Redirect("~/New/DashBoard");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        [Authorize]
+        public ActionResult DashBoard()
+        {
+            return View();
+        }
+
+        
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("~/New/Login");
         }
     }
 }

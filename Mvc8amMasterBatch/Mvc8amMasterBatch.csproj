@@ -228,6 +228,8 @@
     <Content Include="Views\Default\HtmlHelperExample.cshtml" />
     <Content Include="Views\New\ValidationExample.cshtml" />
     <Content Include="Views\New\FavoriteTeam.cshtml" />
+    <Content Include="Views\New\Login.cshtml" />
+    <Content Include="Views\New\DashBoard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
