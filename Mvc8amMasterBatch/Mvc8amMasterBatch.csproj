@@ -177,6 +177,7 @@
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\Movies.cs" />
+    <Compile Include="Models\MyUserRoleProvider.cs" />
     <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>RoleModel.tt</DependentUpon>
@@ -195,6 +196,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RoleModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserDetail.cs">
+      <DependentUpon>RoleModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRoleMapping.cs">
+      <DependentUpon>RoleModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\myHtmlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +237,8 @@
     <Content Include="Views\New\FavoriteTeam.cshtml" />
     <Content Include="Views\New\Login.cshtml" />
     <Content Include="Views\New\DashBoard.cshtml" />
+    <Content Include="Views\New\AdminManagerDashBoard.cshtml" />
+    <Content Include="Views\New\ManagerDashBoard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

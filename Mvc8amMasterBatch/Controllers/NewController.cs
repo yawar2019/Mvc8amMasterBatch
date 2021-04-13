@@ -243,7 +243,9 @@ namespace Mvc8amMasterBatch.Controllers
         [HttpPost]
         public ActionResult Login(RegisterModel reg)
         {
-            if (reg.UserName == "Admin" && reg.Password == "Admin")
+            EmployeeEntities db = new EmployeeEntities();
+            var user =db.UserDetails.Where(u=>u.UserName==reg.UserName && u.Password==reg.Password);
+            if (user!=null)
             {
                 FormsAuthentication.SetAuthCookie(reg.UserName, false);
                 return Redirect("~/New/DashBoard");
@@ -253,13 +255,25 @@ namespace Mvc8amMasterBatch.Controllers
                 return View();
             }
         }
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public ActionResult DashBoard()
         {
             return View();
         }
 
-        
+        [Authorize(Roles = "Manager")]
+        public ActionResult ManagerDashBoard()
+        {
+            return View();
+        }
+
+
+        [Authorize(Roles = "Admin,Manager")]
+        public ActionResult AdminManagerDashBoard()
+        {
+            return View();
+        }
+
         public ActionResult SignOut()
         {
             FormsAuthentication.SignOut();
