@@ -10,13 +10,17 @@ namespace Mvc8amMasterBatch.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        public RedirectResult GoodMorning(int ? id)
+        public ActionResult GoodMorning(int ? id)
         {
-            return Redirect("http://www.google.com");
+             ViewData["info"] = "james";
+            //ViewBag.info = "Khalnayak";
+            return View();
         }
 
         public RedirectResult GoodMorning2()
         {
+            //string s = ViewData["info"].ToString();//null
+            string s = ViewBag.info;
             return Redirect("~/new/GetListEmployee?id=100");
         }
 
@@ -136,6 +140,21 @@ namespace Mvc8amMasterBatch.Controllers
             EmployeeModel obj = new Models.EmployeeModel();
             obj.EmpName = "Swamy";
             return View(obj);
+        }
+
+        public ActionResult TestTempData()
+        {
+            TempData["frnd"] = "DevAnand";
+          return  RedirectToAction("TestTempData2");
+        }
+        public ActionResult TestTempData2()
+        {
+            //ViewBag.frnd = TempData["frnd"];
+            //TempData.Keep();
+            ViewBag.frnd = TempData.Peek("frnd");
+
+
+            return View();
         }
     }
 }
