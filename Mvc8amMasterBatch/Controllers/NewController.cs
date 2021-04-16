@@ -279,5 +279,9 @@ namespace Mvc8amMasterBatch.Controllers
             FormsAuthentication.SignOut();
             return Redirect("~/New/Login");
         }
+        [OutputCache(Duration = 20,Location =System.Web.UI.OutputCacheLocation.Server)]
+        public ActionResult GetMeData() {
+            return View();
+        }
     }
 }

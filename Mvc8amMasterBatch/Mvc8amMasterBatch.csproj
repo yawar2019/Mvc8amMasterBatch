@@ -250,6 +250,7 @@
     <Content Include="Views\New\AdminManagerDashBoard.cshtml" />
     <Content Include="Views\New\ManagerDashBoard.cshtml" />
     <Content Include="Views\Default\TestTempData2.cshtml" />
+    <Content Include="Views\New\GetMeData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
